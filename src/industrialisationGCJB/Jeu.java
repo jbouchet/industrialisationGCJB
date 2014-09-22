@@ -13,6 +13,9 @@ public class Jeu {
 		return JS2;
 	}
 	
+	public String init() {
+		return "0-0";
+	}
 
 	public String score() {
 		return (JS1 + "-" + JS2);

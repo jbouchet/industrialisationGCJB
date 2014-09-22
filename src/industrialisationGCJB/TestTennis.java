@@ -1,8 +1,6 @@
 package industrialisationGCJB;
 
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,6 +11,7 @@ public class TestTennis {
 	@Test
 	public void testInitialisationNouveauJeu() {
 		Jeu jeu = new Jeu();
+		Assert.assertEquals("0-0", jeu.init());
 	}
 
 	@Test 
