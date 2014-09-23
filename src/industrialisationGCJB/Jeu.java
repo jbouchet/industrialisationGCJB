@@ -30,6 +30,14 @@ public class Jeu implements Serializable{
 		return JS2;
 	}
 	
+	public void setJS1(int jS1) {
+		JS1 = jS1;
+	}
+	
+	public void setJS2(int jS2) {
+		JS2 = jS2;
+	}
+	
 	public String init() {
 		return "0-0";
 	}
@@ -74,8 +82,9 @@ public class Jeu implements Serializable{
 	    	serialiser.persist(this);
 		}
 
-		
 		public void load() {
 	    	Jeu loadedGame = serialiser.read();
+	    	this.setJS1(loadedGame.getJS1());
+	    	this.setJS2(loadedGame.getJS2());
 		}
 }
