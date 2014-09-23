@@ -13,22 +13,26 @@ public class MockitoTest {
 	public void setUp() throws Exception {
 		MockitoAnnotations.initMocks(this);
 	}
-
-	@Test
-	public void test() {
+	
+	@Test 
+    public void testSerialiserSaveMock()
+    {
 		Serialiser serialiser = Mockito.mock(Serialiser.class);
-		Jeu jeu = new Jeu(serialiser);
-		serialiser.read();
-		assertEquals("0-0", jeu.score());
-		System.out.println("Score avant de jouer : " + jeu.score());
-		System.out.println("J1 - Avant de jouer : " + jeu.getJS1());
-		assertEquals("0", jeu.getJS1());
-		jeu.pointJ1();
-		System.out.println("J1 - Après avoir joué : " + jeu.getJS1());
-		assertEquals("15", jeu.getJS1());
-		System.out.println("Score après avoir joué : " + jeu.score());
-		assertEquals("15-0", jeu.score());
+        Jeu jeu = new Jeu();
+		Mockito.doNothing().when(serialiser).persist(Mockito.any(Jeu.class));
+		jeu.setSeri(serialiser);  
 		jeu.score();
-		serialiser.persist(jeu);
-	}	
+        jeu.pointJ1();
+        jeu.save();
+    }
+	
+	@Test 
+    public void testSerializerReset()
+    {
+        Jeu jeu = new Jeu(new Serialiser());
+        jeu.score();
+        jeu.pointJ1();
+        jeu.save();
+        jeu.reset();
+    }
 }

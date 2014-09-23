@@ -9,6 +9,10 @@ public class Jeu implements Serializable{
 	private int JS2;
 	private transient Serialiser serialiser;
 	
+	public Jeu() {
+		super();
+	}
+	
 	public Jeu(Serialiser serialiser) {
 		super();
 		this.serialiser = serialiser;
