@@ -6,23 +6,23 @@ import org.junit.Test;
 
 public class TestTennis {
 
-	Jeu jeu = new Jeu();
+	Jeu jeu = new Jeu(null);
 	
 	@Test
 	public void testInitialisationNouveauJeu() {
-		Jeu jeu = new Jeu();
+		Jeu jeu = new Jeu(null);
 		Assert.assertEquals("0-0", jeu.init());
 	}
 
 	@Test 
 	public void testAfficherScoreDebutDePartie() {
-		Jeu jeu = new Jeu();
+		Jeu jeu = new Jeu(null);
 		Assert.assertEquals("0-0", jeu.score());
 	}
 	
 	@Test 
 	public void testResetScore() {
-		Jeu jeu = new Jeu();
+		Jeu jeu = new Jeu(null);
 		Assert.assertEquals("0-0", jeu.reset());
 	}
 	

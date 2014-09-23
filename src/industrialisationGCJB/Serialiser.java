@@ -14,15 +14,16 @@ public class Serialiser implements ISerialiser {
 	public void persist(Jeu jeu)  {
 		ObjectOutputStream oos = null;
 		FileOutputStream fichier;
+		
 		try {
-			fichier = new FileOutputStream("jeux.ser");
+			fichier = new FileOutputStream("jeu.ser");
 			oos = new ObjectOutputStream(fichier);
 			oos.writeObject(jeu);
 			oos.flush();
+			oos.close();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-
 	}
 
 	/* (non-Javadoc)
@@ -33,10 +34,12 @@ public class Serialiser implements ISerialiser {
 		ObjectInputStream ois = null;
 		FileInputStream fichier;
 		Jeu retour;
+		
 		try {
 			fichier = new FileInputStream("jeu.ser");
 			ois = new ObjectInputStream(fichier);
 			retour = (Jeu) ois.readObject();
+			ois.close();
 		} catch (IOException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}

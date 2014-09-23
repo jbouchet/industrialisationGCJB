@@ -1,10 +1,27 @@
 package industrialisationGCJB;
 
-public class Jeu {
+import java.io.Serializable;
 
-	private int JS1 = 0;
-	private int JS2 = 0;
+@SuppressWarnings("serial")
+public class Jeu implements Serializable{
 
+	private int JS1;
+	private int JS2;
+	private transient Serialiser serialiser;
+	
+	public Jeu(Serialiser serialiser) {
+		super();
+		this.serialiser = serialiser;
+	}
+
+	public Serialiser getSeri() {
+		return serialiser;
+	}
+
+	public void setSeri(Serialiser serialiser) {
+		this.serialiser = serialiser;
+	}
+	
 	public int getJS1() {
 		return JS1;
 	}
@@ -52,4 +69,13 @@ public class Jeu {
 		}
 		return result;
 	}
+	
+	 public void save() {
+	    	serialiser.persist(this);
+		}
+
+		
+		public void load() {
+	    	Jeu loadedGame = serialiser.read();
+		}
 }
