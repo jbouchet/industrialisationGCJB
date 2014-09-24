@@ -8,3 +8,11 @@ repositories {
 dependencies {
 	//intTestCompile 'junit:junit:4.11'
 }
+
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+  }
+}
