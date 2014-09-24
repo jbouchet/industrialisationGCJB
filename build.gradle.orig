@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 version=1.0
 sourceCompatibility=1.8
 
@@ -8,7 +7,7 @@ repositories {
 }
 
 dependencies {
-	testCompile 'junit:junit:4.11'
+	testCompile group'junit:junit:4.11'
 }
 
 sourceSets {
@@ -17,7 +16,10 @@ sourceSets {
       srcDir 'src/industrialisationGCJB'
     }
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 58ebdd4a65dfb75ef8f824e68aa18e0b339832fb
   test {
     java {
       srcDir 'test'

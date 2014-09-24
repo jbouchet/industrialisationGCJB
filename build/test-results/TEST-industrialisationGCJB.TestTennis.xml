@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="industrialisationGCJB.TestTennis" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-09-24T11:37:46" hostname="imie-dev-debian" time="0.003">
+<testsuite name="industrialisationGCJB.TestTennis" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-09-24T11:52:27" hostname="imie-dev-debian" time="0.015">
   <properties/>
   <testcase name="testAfficherScoreDebutDePartie" classname="industrialisationGCJB.TestTennis" time="0.001"/>
   <testcase name="testInitialisationNouveauJeu" classname="industrialisationGCJB.TestTennis" time="0.0"/>
   <testcase name="testPointJ11" classname="industrialisationGCJB.TestTennis" time="0.0"/>
-  <testcase name="testPointJ12" classname="industrialisationGCJB.TestTennis" time="0.0"/>
+  <testcase name="testPointJ12" classname="industrialisationGCJB.TestTennis" time="0.007"/>
   <testcase name="testPointJ13" classname="industrialisationGCJB.TestTennis" time="0.0"/>
   <testcase name="testResetScore" classname="industrialisationGCJB.TestTennis" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
