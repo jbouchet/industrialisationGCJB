@@ -16,4 +16,10 @@ sourceSets {
       srcDir 'src/industrialisationGCJB'
     }
   }
+  
+  test {
+    java {
+      srcDir 'test'
+    }
+  }
 }

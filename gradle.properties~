@@ -1,0 +1,10 @@
+systemProp.http.proxyHost=10.0.0.254
+systemProp.http.proxyPort=3128
+systemProp.http.proxyUser=guillaume.cdpn02
+systemProp.http.proxyPassword=P@ssw0rd
+systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost
+systemProp.https.proxyHost=10.0.0.254
+systemProp.https.proxyPort=3128
+systemProp.https.proxyUser=guillaume.cdpn02
+systemProp.https.proxyPassword=P@ssw0rd
+systemProp.https.nonProxyHosts=*.nonproxyrepos.com|localhost
