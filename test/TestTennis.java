@@ -18,7 +18,7 @@ public class TestTennis {
 	@Test
 	public void testInitialisationNouveauJeu() {
 		Jeu jeu = new Jeu();
-		Assert.assertEquals("0-0", jeu.init());
+		Assert.assertEquals("dfff", jeu.init());
 	}
 
 	@Test 
