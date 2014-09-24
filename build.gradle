@@ -1,18 +1,19 @@
 apply plugin: 'java'
 version=1.0
+sourceCompatibility=1.8
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	//intTestCompile 'junit:junit:4.11'
+	testCompile 'junit:junit:4.11'
 }
 
 sourceSets {
   main {
     java {
-      srcDir 'src'
+      srcDir 'src/industrialisationGCJB'
     }
   }
 }
