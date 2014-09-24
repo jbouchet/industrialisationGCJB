@@ -1,12 +1,10 @@
 apply plugin: 'java'
 version=1.0
+
 repositories {
-mavenCentral()
-flatDir(dirs:'lib')
+	mavenCentral()
 }
+
 dependencies {
-compile(
-group:'org.apache.wicket',
-name:'wicket',
-version:'1.4.7')
+	//intTestCompile 'junit:junit:4.11'
 }
